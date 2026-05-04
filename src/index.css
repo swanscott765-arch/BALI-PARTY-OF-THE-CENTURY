@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Space+Grotesk:wght@300;500;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Helvetica Neue", "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-border-dark: #333333;
+  --color-spotify-green: #1DB954;
+  --color-accent-pink: #f0f;
+  --color-tech-gray: #888888;
+  --color-bg-black: #050505;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-black text-white antialiased selection:bg-white selection:text-black overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .grid-border {
+    @apply border-border-dark;
+  }
+
+  .tech-header {
+    @apply h-16 flex items-center justify-between px-10 border-b border-border-dark text-[12px] uppercase tracking-[0.3em] text-tech-gray;
+  }
+
+  .y21k-tag {
+    @apply bg-white text-black px-2 py-0.5 font-black text-[11px] tracking-normal;
+  }
+
+  .main-title {
+    @apply text-[15vw] md:text-[240px] font-black leading-[0.8] tracking-[-0.05em] uppercase italic transform skew-x-[-10deg];
+  }
+
+  .vertical-label {
+    @apply [writing-mode:vertical-rl] text-[11px] tracking-[0.5em] text-accent-pink opacity-80 uppercase;
+  }
+
+  .lineup-item {
+    @apply border-t border-border-dark py-12 px-10 flex flex-col gap-2;
+  }
+
+  .label-sm {
+    @apply text-[10px] uppercase text-[#555] tracking-[0.1em] mb-2;
+  }
+
+  .artist-name {
+    @apply text-3xl md:text-5xl font-bold leading-tight uppercase tracking-tighter;
+  }
+
+  .tech-decor-corner {
+    @apply absolute w-24 h-24 border-l border-t border-border-dark opacity-50;
+  }
+}
